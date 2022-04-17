@@ -12,22 +12,18 @@
 // # Specify types=country to search only for countries named Georgia
 // # Results will exclude the American state of Georgia
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/georgia.json?types=country&access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 // # Search for "Starbucks" in Washington, D.C.
 // # Use a bounding box to limit results to within the district
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/starbucks.json?bbox=-77.083056,38.908611,-76.997778,38.959167&access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 // # Limit the results to two results using the limit option
 // # Even though there are many possible matches
 // # for "Washington", this query will only return two results.
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/Washington.json?limit=2&access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 // # Search for the Place feature "Kaaleng" in the Ilemi Triangle. Specifying the cn worldview will return the country value South Sudan. Not including leaving the worldview parameter would default to the us worldview and return the country value Kenya.
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/Kaaleng.json?worldview=cn&access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 let SatNumber = document.querySelector('#norad');
 
@@ -46,11 +42,7 @@ function randomColor()
 
      return color;
 }
-let red = randomColor()
-// let base 
-//  = `https://api.mapbox.com/geocoding/v5/mapbox.places/.json?
-  //access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGF
-  //jM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g`;
+
 
 let keyHolder = document.querySelector('#API');
 let key = keyHolder.value;
@@ -59,8 +51,8 @@ let key = keyHolder.value;
 async function StartUpLink(){
    const httpResponseData = await fetch (encodeURI(`https://api.mapbox.com/geocoding/v5/mapbox.places/${AdressSat.value}.json?access_token=${keyHolder.value}`));
 
-//pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF3dGJ2aXEydmFrM2RtdGpoOHExMTRnIn0.SYGDZVC-d6I5zoVBM90TPw
-   
+
+   let apple = console.log('apple');
   
 const DataMap = await httpResponseData.json();
 console.log(DataMap);
