@@ -1,13 +1,11 @@
 // # A basic forward geocoding request
 // # Find Los Angeles
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 // # Find a town called 'Chester' in a specific region
 // # Add the proximity parameter with local coordinates
 // # This ensures the town of Chester, New Jersey is in the results
 
-// $ curl "https://api.mapbox.com/geocoding/v5/mapbox.places/chester.json?proximity=-74.70850,40.78375&access_token=pk.eyJ1IjoiZGFuMjEwMSIsImEiOiJjbDF1eDZ6cmkwMGFjM2NxZ3Q0b2N2NjJmIn0.XQ51f2cXnca-fUGPVJIl_g"
 
 // # Specify types=country to search only for countries named Georgia
 // # Results will exclude the American state of Georgia
